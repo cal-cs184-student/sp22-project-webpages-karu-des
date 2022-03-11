@@ -381,19 +381,19 @@ left. The implementation for this is very straightforward, using a for loop to
 go through all sets of adjacent points and finding the intermediate points for
 a step. Then evaluating the step multiple times gets us the result that we want.</p>
 <h3 id="6-original-points-curve-and-final-evaluated-points">6 Original Points, Curve and Final Evaluated Points</h3>
-<img src="./images/part1-1.png" width="400"/>
-<img src="./images/part1-2.png" width="400"/>
-<img src="./images/part1-8.png" width="400"/>
+<img src="../proj2/images/part1-1.png" width="400"/>
+<img src="../proj2/images/part1-2.png" width="400"/>
+<img src="../proj2/images/part1-8.png" width="400"/>
 <h3 id="each-step-of-casteljaus-algorithm">Each step of Casteljau's Algorithm</h3>
-<img src="./images/part1-3.png" width="400"/>
-<img src="./images/part1-4.png" width="400"/>
-<img src="./images/part1-5.png" width="400"/>
-<img src="./images/part1-6.png" width="400"/>
-<img src="./images/part1-7.png" width="400"/>
+<img src="../proj2/images/part1-3.png" width="400"/>
+<img src="../proj2/images/part1-4.png" width="400"/>
+<img src="../proj2/images/part1-5.png" width="400"/>
+<img src="../proj2/images/part1-6.png" width="400"/>
+<img src="../proj2/images/part1-7.png" width="400"/>
 <br>
 <h3 id="slightly-different-curve-with-different-t-value">Slightly different curve with different t value</h3>
-<img src="./images/part1-9.png" width="400"/>
-<img src="./images/part1-10.png" width="400"/>
+<img src="../proj2/images/part1-9.png" width="400"/>
+<img src="../proj2/images/part1-10.png" width="400"/>
 <h2 id="part-2">Part 2</h2>
 <p>Casteljau's algorithm extends to Bezier surfaces by basically splitting the
 control points of the surface into rows and columns, finding the final single
@@ -405,7 +405,7 @@ to get the final single point using recursion. Finally we could evaluate using
 the control points and the values of u and v plugging things into the helper
 functions to get our final point.</p>
 <h3 id="screenshot-of-bezteapotbez">Screenshot of <code>bez/teapot.bez</code></h3>
-<img src="./images/part2.png" width="600">
+<img src="../proj2/images/part2.png" width="600">
 <h2 id="part-3">Part 3</h2>
 <p>The implementation for area-weighted vertex normals was fairly straightforward.
 I looped through every single face that had the Vertex as a part of it using
@@ -414,8 +414,8 @@ calculate the normal vector as well as the area. Then I added the normal vector
 weighted by the area to the final result vector. Finally, once I had traversed
 through all faces I returned the result as a normalized unit vector.</p>
 <h3 id="screenshot-of-daeteapotdae-without-vertex-normals-left-and-with-vertex-normals-right">Screenshot of <code>dae/teapot.dae</code> without vertex normals (left) and with vertex normals (right)</h3>
-<img src="./images/part3-1.png" width="500"/>
-<img src="./images/part3-2.png" width="500"/>
+<img src="../proj2/images/part3-1.png" width="500"/>
+<img src="../proj2/images/part3-2.png" width="500"/>
 <h2 id="part-4">Part 4</h2>
 <p>The way I implemented the edge flip operation is by first drawing and listing
 out every single element in a pair of adjacent triangles. Then I also drew the
@@ -426,8 +426,8 @@ was able to then go and make all of those changes to each element as necessary.
 Because of how thorough I was with drawing and preparing before writing any
 code, I did not have to do any debugging.</p>
 <h3 id="screenshot-of-daeteapotdae-normally-left-and-with-some-edge-flips-right">Screenshot of <code>dae/teapot.dae</code> normally (left) and with some edge flips (right)</h3>
-<img src="./images/part4-1.png" width="500"/>
-<img src="./images/part4-2.png" width="500"/>
+<img src="../proj2/images/part4-1.png" width="500"/>
+<img src="../proj2/images/part4-2.png" width="500"/>
 <h2 id="part-5">Part 5</h2>
 <p>The way I implemented the edge split operation is very similar to the edge flip
 operation. I listed out every single element before and after the split, making
@@ -439,9 +439,9 @@ of the way I wrote everything down before writing any code, I only had one
 small error that was due to a typo. I was able to quickly find and fix the error
 without any major debugging issues.</p>
 <h3 id="screenshot-of-daeteapotdae-normally-left-with-some-edge-splits-middle-and-with-some-edge-splits-and-flips-right">Screenshot of <code>dae/teapot.dae</code> normally (left), with some edge splits (middle), and with some edge splits and flips (right)</h3>
-<img src="./images/part5-1.png" width="400"/>
-<img src="./images/part5-2.png" width="400"/>
-<img src="./images/part5-3.png" width="400"/>
+<img src="../proj2/images/part5-1.png" width="400"/>
+<img src="../proj2/images/part5-2.png" width="400"/>
+<img src="../proj2/images/part5-3.png" width="400"/>
 <h2 id="part-6">Part 6</h2>
 <p>When implementing loop subdivision I mainly followed the outline given to us in
 the comments of the method. At first I had trouble fully understanding what
@@ -461,8 +461,8 @@ count of edges instead of <code>edge-&gt;isnew</code>.
 It is very obvious that with loop subdivision, meshes become more defined and
 generally &quot;smoother&quot; in a sense. An example of such smoothing can be seen below.</p>
 <h3 id="screenshot-of-daeteapotdae-normally-left-and-with-one-loop-subdivision-right">Screenshot of <code>dae/teapot.dae</code> normally (left) and with one loop subdivision (right)</h3>
-<img src="./images/part6-1.png" width="500"/>
-<img src="./images/part6-2.png" width="500"/>
+<img src="../proj2/images/part6-1.png" width="500"/>
+<img src="../proj2/images/part6-2.png" width="500"/>
 <br>
 <br>
 Additionally we notice that for the cube, it begins to become asymmetric after 
@@ -472,9 +472,9 @@ split each diagonal edge before performing subdivisions we end up with a cube
 that divides symmetrically. The reason this works is because the splits happen 
 evenly without any weird randomness in splitting order effecting how the cube divides.
 <h3 id="screenshot-of-daecubedae-with-preprocessing-and-3-layers-of-loop-subdivision-left-to-right">Screenshot of <code>dae/cube.dae</code> with preprocessing and 3 layers of loop subdivision (left to right)</h3>
-<img src="./images/part6-3.png" width="300"/>
-<img src="./images/part6-4.png" width="300"/>
-<img src="./images/part6-5.png" width="300"/>
-<img src="./images/part6-6.png" width="300"/>
+<img src="../proj2/images/part6-3.png" width="300"/>
+<img src="../proj2/images/part6-4.png" width="300"/>
+<img src="../proj2/images/part6-5.png" width="300"/>
+<img src="../proj2/images/part6-6.png" width="300"/>
 </body>
 </html>
